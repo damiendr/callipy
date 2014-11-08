@@ -110,6 +110,6 @@ Then when calling `get_notebook_params()` anything after this line will be ignor
 
 ## Acknowledgments
 
-Based on the good work by **@paulbg**: https://github.com/paulgb/runipy
+Based on the good work by **@paulgb**: https://github.com/paulgb/runipy
 
 Any reference to a famous statue is purely coincidental.
