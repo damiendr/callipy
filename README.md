@@ -17,7 +17,7 @@ Let's create a notebook called `notebook.ipynb`, containing the following cell:
 y = 2 * x
 ```
 
-Now let's call this notebook from another session with a value for `x` and get the result:
+Now let's call this notebook from another session with a value for `x` and get the result `y`:
 
 ```python
 >>> import callipy
