@@ -84,7 +84,7 @@ You can customise this behaviour by giving as the default value an object `mydef
 - `mydefault[0]`: returns the default value
 - `x in mydefault`: tests whether `x` is allowed
 
-Note that a lone string is treated as an atomic value, not as a sequence of characters:
+Note that a lone string is treated as an atomic value, not as an enumeration of characters:
 
 ```python
 %param a "test" # the default value is 'test'
