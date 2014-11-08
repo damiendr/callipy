@@ -66,7 +66,7 @@ Now we can run the notebook from the browser, or call it without arguments, and 
 10
 ```
 
-When more than one value is given, then the first value is the default value:
+When more than one value is given, the parameter behaves as an enumerated type and the first value is the default value:
 
 ```python
 %param mode "simple", "advanced"
