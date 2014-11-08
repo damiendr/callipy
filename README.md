@@ -106,7 +106,7 @@ Caveat: to extract this information, `callipy` must execute the notebook. What i
 %params_done
 ```
 
-Then when calling `get_notebook_params()` anything after this line will be ignored.
+Then when calling `get_notebook_params()` anything after this cell will be ignored.
 
 ## Acknowledgments
 
