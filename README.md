@@ -50,7 +50,7 @@ Finally, the notebook object itself can be accessed as `result.notebook`. See th
 
 ## Default values and validation
 
-That's all good and well, but we have a slight problem: if we try run the target notebook from an interactive session, it will complain about `x` not being defined.
+That's all good and well, but we have a slight problem: if we try to run the target notebook from an interactive session, it will complain about `x` not being defined.
 
 The solution is to declare the parameters and their default value at the beginning of `notebook.ipynb`:
 
