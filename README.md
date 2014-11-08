@@ -74,7 +74,7 @@ When more than one value is given, then the first value is the default value:
 
 If the notebook is called with a value that was not declared, an error will be raised:
 
-```
+```python
 >>> callipy.call_notebook("notebook.ipynb", mode="wrong")
 ValueError: Invalid value 'wrong' for parameter mode: "simple", "advanced"
 ```
