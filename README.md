@@ -30,7 +30,6 @@ Now let's call this notebook from another session with a value for `x` and get t
 First the keyword arguments given to `call_notebook` are injected into the notebook's namespace and `runipy` is used to execute all of its cells:
 
 ```python
->>> import callipy
 >>> result = callipy.call_notebook("notebook.ipynb", x=2)
 >>> result
 <callipy.NotebookResult at 0x106b92f10>
@@ -60,7 +59,7 @@ The solution is to declare the parameters and their default value at the beginni
 %param x 5
 ```
 
-Now we can run the notebook from the browser, or call it without arguments, and it will used the default value for every missing argument:
+Now we can run the notebook from the browser, or call it without arguments, and it will use the default value for every missing argument:
 
 ```python
 >>> callipy.call_notebook("notebook.ipynb").y
@@ -77,7 +76,7 @@ If the notebook is called with a value that was not declared, an error will be r
 
 ```
 >>> callipy.call_notebook("notebook.ipynb", mode="wrong")
-ValueError: Invalid value 'wrong' for parameter x: "simple", "advanced"
+ValueError: Invalid value 'wrong' for parameter mode: "simple", "advanced"
 ```
 
 You can customise this behaviour by giving as the default value an object `mydefault` that supports the following:

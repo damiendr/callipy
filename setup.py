@@ -14,7 +14,6 @@ setup(
     description='Calling IPython notebooks with arguments',
     version='0.2',
     author='Damien Drix',
-    author_email='damien.drix@gmail.com',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: IPython',

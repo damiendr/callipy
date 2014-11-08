@@ -44,7 +44,7 @@ class ParameterMagics(Magics):
             # Yes. Validate the existing value against the spec:
             value = self.shell.user_ns[name]
             if allowed_values is not None and value not in allowed_values:
-                raise ValueError("Invalid value %s for parameter %s: %s" \
+                raise ValueError("Invalid value '%s' for parameter %s: %s" \
                                  % (value, name, spec_str))
 
 
