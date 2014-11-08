@@ -54,7 +54,7 @@ That's all good and well, but we have a slight problem: if we try to run the tar
 
 The solution is to declare the parameters and their default value at the beginning of `notebook.ipynb`:
 
-```
+```python
 %load_ext callipy
 %param x 5
 ```
@@ -68,7 +68,7 @@ Now we can run the notebook from the browser, or call it without arguments, and 
 
 When more than one value is given, then the first value is the default value:
 
-```
+```python
 %param mode "simple", "advanced"
 ```
 
@@ -86,7 +86,7 @@ You can customise this behaviour by giving as the default value an object `mydef
 
 Note that a lone string is treated as an atomic value, not as a sequence of characters:
 
-```
+```python
 %param a "test" # the default value is 'test'
 %param b list("test") # the default value is 't'
 ```
@@ -100,7 +100,7 @@ Finally, a notebook can be queried for the parameters it declares:
 
 Caveat: to extract this information, `callipy` must execute the notebook. What if this takes time or produces side-effects? To alleviate the problem, the instruction `%params_done` can be placed in the notebook:
 
-```
+```python
 %param x 5
 %param mode "simple", "advanced"
 %params_done
