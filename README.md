@@ -46,7 +46,7 @@ After running the notebook, the value of any variable in the notebook's namespac
 
 Note: arguments and output values must be pickleable.
 
-Finally, the notebook object itself can be accessed as `result.notebook`. See the [https://github.com/paulgb/runipy](`runipy`'s documententation) for examples of things you can do with the notebook object.
+Finally, the notebook object itself can be accessed as `result.notebook`. See https://github.com/paulgb/runipy for examples of things you can do with the notebook object.
 
 ## Default values and validation
 
