@@ -7,7 +7,9 @@
 
 ## Installation
 
-Clone this repository and install with `python setup.py install`. A PyPi entry is forthcoming.
+```
+pip install callipy
+```
 
 ## Simple Usage
 
