@@ -12,13 +12,13 @@ from os import path
 setup(
     name='callipy',
     description='Calling IPython notebooks with arguments',
-    version='0.2',
+    version='0.3',
     author='Damien Drix',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: IPython',
     ],
-    scripts=['callipy.py'],
+    py_modules=['callipy'],
     install_requires=[
         "runipy",
         "ipython",
