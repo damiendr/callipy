@@ -20,6 +20,7 @@ class ParameterMagics(Magics):
     def param(self, line):
         # Parse the line into a parameter name and a parameter spec:
         name, spec_str = line.split(None, 1)
+        name = str(name) # since it's an identifier, get a bytestring
         spec = eval(spec_str, self.shell.user_ns)
         self.params[name] = spec
 
