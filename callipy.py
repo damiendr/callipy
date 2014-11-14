@@ -30,7 +30,8 @@ class ParameterMagics(Magics):
         try:
             # Treat lone strings as atoms, not as containers:
             if isinstance(spec, basestring): raise TypeError
-            default_value = spec[0]
+            try: default_value = spec[name]
+            except: default_value = spec[0]
             allowed_values = spec
         except TypeError:
             # The spec *is* the default value; don't validate.

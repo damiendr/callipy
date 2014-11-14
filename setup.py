@@ -13,7 +13,7 @@ setup(
     name='callipy',
     description='Calling IPython notebooks with arguments',
     long_description=long_description,
-    version='0.3.1',
+    version='0.3.2',
     author='Damien Drix',
     author_email='damien.drix+pypi@gmail.com',
     url='https://github.com/damiendr/callipy',
