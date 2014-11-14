@@ -5,9 +5,14 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 # Get the long description from the relevant file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
-    long_description = f.read()
-
+readme = path.join(here, 'README.md')
+try:
+    from pypandoc import convert
+    long_description = convert(readme, 'rst')
+except ImportError:
+    print("warning: pypandoc module not found, could not convert Markdown to RST")
+    with open(readme, 'r', encoding='utf-8') as f:
+        long_description = f.read()
 
 setup(
     name='callipy',

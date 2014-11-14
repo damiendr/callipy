@@ -84,6 +84,7 @@ ValueError: Invalid value 'wrong' for parameter mode: "simple", "advanced"
 You can customise this behaviour by giving as the default value an object `mydefault` that supports the following:
 
 - `mydefault[0]`: returns the default value
+- `mydefault[param_name]`: as above, but with the parameter name
 - `x in mydefault`: tests whether `x` is allowed
 
 Note that a lone string is treated as an atomic value, not as an enumeration of characters:
