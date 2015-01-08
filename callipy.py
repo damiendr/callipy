@@ -24,13 +24,13 @@ class ParameterMagics(Magics):
         spec = eval(spec_str, self.shell.user_ns)
         self.params[name] = spec
 
-        # If `spec` is a container, then the default value is
-        # the first item and `val in spec` can be used for
+        # If `spec` is a container, then the default value is either
+        # `spec.default(name)` or `spec[0]`, and `val in spec` can be used for
         # validation.
         try:
             # Treat lone strings as atoms, not as containers:
             if isinstance(spec, basestring): raise TypeError
-            try: default_value = spec[name]
+            try: default_value = spec.default(name)
             except: default_value = spec[0]
             allowed_values = spec
         except TypeError:
@@ -42,12 +42,12 @@ class ParameterMagics(Magics):
         if not name in self.shell.user_ns:
             # Nope. Inject the default value into the namespace:
             self.shell.user_ns[name] = default_value
-        else:
-            # Yes. Validate the existing value against the spec:
-            value = self.shell.user_ns[name]
-            if allowed_values is not None and value not in allowed_values:
-                raise ValueError("Invalid value '%s' for parameter %s: %s" \
-                                 % (value, name, spec_str))
+        # else:
+        #     # Yes. Validate the existing value against the spec:
+        #     value = self.shell.user_ns[name]
+        #     if allowed_values is not None and value not in allowed_values:
+        #         raise ValueError("Invalid value '%s' for parameter %s: %s" \
+        #                          % (value, name, spec_str))
 
 
 def load_ipython_extension(ip):
